@@ -1,5 +1,10 @@
-import stickyDirectice  from './sticky';
+import stickyDirective  from './sticky';
 
-export default (Vue) => {
-  Vue.directive('sticky',  stickyDirectice);
+
+module.exports = {
+  install(Vue) {
+    Vue.directive('sticky',  stickyDirective);
+  },
+
+  stickyDirective
 };
