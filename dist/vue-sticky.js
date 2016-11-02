@@ -60,381 +60,450 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _HelloWorld = __webpack_require__(1);
+	var _sticky = __webpack_require__(1);
 	
-	var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
+	var _sticky2 = _interopRequireDefault(_sticky);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = {
-	  HelloWorld: _HelloWorld2.default
+	exports.default = function (Vue) {
+	  Vue.directive('sticky', _sticky2.default);
 	};
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(2)
-	__vue_script__ = __webpack_require__(6)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/HelloWorld.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(7)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-11f00942/HelloWorld.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(3);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-11f00942&scoped=true!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./HelloWorld.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-11f00942&scoped=true!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./HelloWorld.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "h1[_v-11f00942] {\n  color: tomato; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0,
-		styleElementsInsertedAtTop = [];
-	
-	module.exports = function(list, options) {
-		if(false) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-	
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
-		// By default, add <style> tags to the bottom of <head>.
-		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-	
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-	
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-	
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-	
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-	
-	function insertStyleElement(options, styleElement) {
-		var head = getHeadElement();
-		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
-		if (options.insertAt === "top") {
-			if(!lastStyleElementInsertedAtTop) {
-				head.insertBefore(styleElement, head.firstChild);
-			} else if(lastStyleElementInsertedAtTop.nextSibling) {
-				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
-			} else {
-				head.appendChild(styleElement);
-			}
-			styleElementsInsertedAtTop.push(styleElement);
-		} else if (options.insertAt === "bottom") {
-			head.appendChild(styleElement);
-		} else {
-			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-		}
-	}
-	
-	function removeStyleElement(styleElement) {
-		styleElement.parentNode.removeChild(styleElement);
-		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
-		if(idx >= 0) {
-			styleElementsInsertedAtTop.splice(idx, 1);
-		}
-	}
-	
-	function createStyleElement(options) {
-		var styleElement = document.createElement("style");
-		styleElement.type = "text/css";
-		insertStyleElement(options, styleElement);
-		return styleElement;
-	}
-	
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-	
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement(options));
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else {
-			styleElement = createStyleElement(options);
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-			};
-		}
-	
-		update(obj);
-	
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-	
-	var replaceText = (function () {
-		var textStore = [];
-	
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-	
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-	
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-	
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-		var sourceMap = obj.sourceMap;
-	
-		if (media) {
-			styleElement.setAttribute("media", media);
-		}
-	
-		if (sourceMap) {
-			// https://developer.chrome.com/devtools/docs/javascript-debugging
-			// this makes source maps inside style tags work properly in Chrome
-			css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */';
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-	
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _stickyJs = __webpack_require__(2);
+	
+	var _stickyJs2 = _interopRequireDefault(_stickyJs);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	exports.default = {
-	  name: 'HelloWorld'
+	  bind: function bind(val) {
+	    this.el.parentElement.setAttribute('data-sticky-container', '');
+	    this.el.className += ' sticky';
+	  },
+	  update: function update(val) {
+	    if (val) {
+	      if (val.marginTop) {
+	        this.el.setAttribute('data-margin-top', val.marginTop);
+	      }
+	      if (val.forName) {
+	        this.el.setAttribute('data-sticky-for', val.forName);
+	      }
+	      if (val.className) {
+	        this.el.setAttribute('data-sticky-class', val.className);
+	      }
+	    }
+	
+	    new _stickyJs2.default('.sticky');
+	  }
 	};
 
 /***/ },
-/* 7 */
-/***/ function(module, exports) {
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<h1 _v-11f00942=\"\">Hello World</h1>";
+	
+	var Sticky = __webpack_require__(3);
+	
+	module.exports = Sticky;
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	/**
+	 * Sticky.js
+	 * Library for sticky elements written in vanilla javascript. With this library you can easily set sticky elements on your website. It's also responsive.
+	 *
+	 * @version 1.1.4
+	 * @author Rafal Galus <biuro@rafalgalus.pl>
+	 * @website https://rgalus.github.io/sticky-js/
+	 * @repo https://github.com/rgalus/sticky-js
+	 * @license https://github.com/rgalus/sticky-js/blob/master/LICENSE
+	 */
+	
+	var Sticky = function () {
+	  /**
+	   * Sticky instance constructor
+	   * @constructor
+	   * @param {string} selector - Selector which we can find elements
+	   * @param {string} options - Global options for sticky elements (could be overwritten by data-{option}="" attributes)
+	   */
+	  function Sticky() {
+	    var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	
+	    _classCallCheck(this, Sticky);
+	
+	    this.selector = selector;
+	    this.elements = [];
+	
+	    this.version = '1.1.4';
+	
+	    this.vp = this.getViewportSize();
+	    this.scrollTop = this.getScrollTopPosition();
+	
+	    this.options = {
+	      marginTop: options.marginTop || 0,
+	      stickyFor: options.stickFor || 0,
+	      stickyClass: options.stickyClass || null
+	    };
+	
+	    this.run();
+	  }
+	
+	  /**
+	   * Function that waits for page to be fully loaded and then renders & activates every sticky element found with specified selector
+	   * @function
+	   */
+	
+	
+	  Sticky.prototype.run = function run() {
+	    var _this = this;
+	
+	    // wait for page to be fully loaded
+	    var pageLoaded = setInterval(function () {
+	      if (document.readyState === 'complete') {
+	        clearInterval(pageLoaded);
+	
+	        var elements = document.querySelectorAll(_this.selector);
+	        _this.forEach(elements, function (element) {
+	          return _this.renderElement(element);
+	        });
+	      }
+	    }, 10);
+	  };
+	
+	  /**
+	   * Function that assign needed variables for sticky element, that are used in future for calculations and other
+	   * @function
+	   * @param {node} element - Element to be rendered
+	   */
+	
+	
+	  Sticky.prototype.renderElement = function renderElement(element) {
+	    var _this2 = this;
+	
+	    // create container for variables needed in future
+	    element.sticky = {};
+	
+	    // set default variables
+	    element.sticky.active = false;
+	
+	    element.sticky.marginTop = parseInt(element.getAttribute('data-margin-top')) || this.options.marginTop;
+	    element.sticky.stickyFor = parseInt(element.getAttribute('data-sticky-for')) || this.options.stickyFor;
+	    element.sticky.stickyClass = element.getAttribute('data-sticky-class') || this.options.stickyClass;
+	
+	    element.sticky.container = this.getStickyContainer(element);
+	    element.sticky.container.rect = this.getRectangle(element.sticky.container);
+	
+	    element.sticky.rect = this.getRectangle(element);
+	
+	    // fix when element is image that has not yet loaded and width, height = 0
+	    if (element.tagName.toLowerCase === 'img') {
+	      element.onload = function () {
+	        return element.sticky.rect = _this2.getRectangle(element);
+	      };
+	    }
+	
+	    // activate rendered element
+	    this.activate(element);
+	  };
+	
+	  /**
+	   * Function that activates element when specified conditions are met and then initalise events
+	   * @function
+	   * @param {node} element - Element to be activated
+	   */
+	
+	
+	  Sticky.prototype.activate = function activate(element) {
+	    var heightBefore = element.sticky.container.offsetHeight;
+	
+	    this.css(element, { position: 'fixed' });
+	
+	    var heightAfter = element.sticky.container.offsetHeight;
+	
+	    this.css(element, { position: '' });
+	
+	    if (heightAfter >= heightBefore && element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
+	      element.sticky.active = true;
+	    }
+	
+	    if (this.elements.indexOf(element) < 0) {
+	      this.elements.push(element);
+	    }
+	
+	    if (!element.sticky.resizeEvent) {
+	      this.initResizeEvents(element);
+	      element.sticky.resizeEvent = true;
+	    }
+	
+	    if (!element.sticky.scrollEvent) {
+	      this.initScrollEvents(element);
+	      element.sticky.scrollEvent = true;
+	    }
+	  };
+	
+	  /**
+	   * Function which is adding onResizeEvents to window listener and assigns function to element as resizeListener
+	   * @function
+	   * @param {node} element - Element for which resize events are initialised
+	   */
+	
+	
+	  Sticky.prototype.initResizeEvents = function initResizeEvents(element) {
+	    var _this3 = this;
+	
+	    element.sticky.resizeListener = function () {
+	      return _this3.onResizeEvents(element);
+	    };
+	    window.addEventListener('resize', element.sticky.resizeListener);
+	  };
+	
+	  /**
+	   * Function which is fired when user resize window. It checks if element should be activated or deactivated and then run setPosition function
+	   * @function
+	   * @param {node} element - Element for which event function is fired
+	   */
+	
+	
+	  Sticky.prototype.onResizeEvents = function onResizeEvents(element) {
+	    this.vp = this.getViewportSize();
+	
+	    element.sticky.rect = this.getRectangle(element);
+	    element.sticky.container.rect = this.getRectangle(element.sticky.container);
+	
+	    if (element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
+	      element.sticky.active = true;
+	    } else if (element.sticky.stickyFor >= this.vp.width && element.sticky.active) {
+	      element.sticky.active = false;
+	    }
+	
+	    this.setPosition(element);
+	  };
+	
+	  /**
+	   * Function which is adding onScrollEvents to window listener and assigns function to element as scrollListener
+	   * @function
+	   * @param {node} element - Element for which scroll events are initialised
+	   */
+	
+	
+	  Sticky.prototype.initScrollEvents = function initScrollEvents(element) {
+	    var _this4 = this;
+	
+	    element.sticky.scrollListener = function () {
+	      return _this4.onScrollEvents(element);
+	    };
+	    window.addEventListener('scroll', element.sticky.scrollListener);
+	  };
+	
+	  /**
+	   * Function which is fired when user scroll window. If element is active, function is invoking setPosition function
+	   * @function
+	   * @param {node} element - Element for which event function is fired
+	   */
+	
+	
+	  Sticky.prototype.onScrollEvents = function onScrollEvents(element) {
+	    this.scrollTop = this.getScrollTopPosition();
+	
+	    if (element.sticky.active) {
+	      this.setPosition(element);
+	    }
+	  };
+	
+	  /**
+	   * Main function for the library. Here are some condition calculations and css appending for sticky element when user scroll window
+	   * @function
+	   * @param {node} element - Element that will be positioned if it's active
+	   */
+	
+	
+	  Sticky.prototype.setPosition = function setPosition(element) {
+	    this.css(element, { position: '', width: '', top: '', left: '' });
+	
+	    if (this.vp.height < element.sticky.rect.height || !element.sticky.active) {
+	      return;
+	    }
+	
+	    if (!element.sticky.rect.width) {
+	      element.sticky.rect = this.getRectangle(element);
+	    }
+	
+	    if (this.scrollTop > element.sticky.rect.top - element.sticky.marginTop) {
+	      this.css(element, {
+	        position: 'fixed',
+	        width: element.sticky.rect.width + 'px',
+	        left: element.sticky.rect.left + 'px'
+	      });
+	
+	      if (this.scrollTop + element.sticky.rect.height + element.sticky.marginTop > element.sticky.container.rect.top + element.sticky.container.offsetHeight) {
+	
+	        if (element.sticky.stickyClass) element.classList.remove(element.sticky.stickyClass);
+	
+	        this.css(element, {
+	          top: element.sticky.container.rect.top + element.sticky.container.offsetHeight - (this.scrollTop + element.sticky.rect.height) + 'px' });
+	      } else {
+	        if (element.sticky.stickyClass) element.classList.add(element.sticky.stickyClass);
+	
+	        this.css(element, { top: element.sticky.marginTop + 'px' });
+	      }
+	    } else {
+	      if (element.sticky.stickyClass) element.classList.remove(element.sticky.stickyClass);
+	
+	      this.css(element, { position: '', width: '', top: '', left: '' });
+	    }
+	  };
+	
+	  /**
+	   * Function that updates element sticky rectangle (with sticky container), then activate or deactivate element, then update position if it's active
+	   * @function
+	   */
+	
+	
+	  Sticky.prototype.update = function update() {
+	    var _this5 = this;
+	
+	    this.forEach(this.elements, function (element) {
+	      element.sticky.rect = _this5.getRectangle(element);
+	      element.sticky.container.rect = _this5.getRectangle(element.sticky.container);
+	
+	      _this5.activate(element);
+	      _this5.setPosition(element);
+	    });
+	  };
+	
+	  /**
+	   * Function that returns container element in which sticky element is stuck (if is not specified, then it's stuck to body)
+	   * @function
+	   * @param {node} element - Element which sticky container are looked for
+	   * @return {node} element - Sticky container
+	   */
+	
+	
+	  Sticky.prototype.getStickyContainer = function getStickyContainer(element) {
+	    var container = element;
+	
+	    while (!container.hasAttribute('data-sticky-container') && container !== document.querySelector('body')) {
+	      container = container.parentNode;
+	    }
+	
+	    return container;
+	  };
+	
+	  /**
+	   * Function that returns element rectangle & position (width, height, top, left)
+	   * @function
+	   * @param {node} element - Element which position & rectangle are returned
+	   * @return {object}
+	   */
+	
+	
+	  Sticky.prototype.getRectangle = function getRectangle(element) {
+	    this.css(element, { position: '', width: '', top: '', left: '' });
+	
+	    var width = Math.max(element.offsetWidth, element.clientWidth, element.scrollWidth);
+	    var height = Math.max(element.offsetHeight, element.clientHeight, element.scrollHeight);
+	
+	    var top = 0;
+	    var left = 0;
+	
+	    do {
+	      top += element.offsetTop || 0;
+	      left += element.offsetLeft || 0;
+	      element = element.offsetParent;
+	    } while (element);
+	
+	    return { top: top, left: left, width: width, height: height };
+	  };
+	
+	  /**
+	   * Function that returns viewport dimensions
+	   * @function
+	   * @return {object}
+	   */
+	
+	
+	  Sticky.prototype.getViewportSize = function getViewportSize() {
+	    return {
+	      width: Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
+	      height: Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+	    };
+	  };
+	
+	  /**
+	   * Function that returns scroll position offset from top
+	   * @function
+	   * @return {number}
+	   */
+	
+	
+	  Sticky.prototype.getScrollTopPosition = function getScrollTopPosition() {
+	    return (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0;
+	  };
+	
+	  /**
+	   * Helper function for loops
+	   * @helper
+	   * @param {array}
+	   * @param {function} callback - Callback function (no need for explanation)
+	   */
+	
+	
+	  Sticky.prototype.forEach = function forEach(array, callback) {
+	    for (var i = 0, len = array.length; i < len; i++) {
+	      callback(array[i]);
+	    }
+	  };
+	
+	  /**
+	   * Helper function to add/remove css properties for specified element.
+	   * @helper
+	   * @param {node} element - DOM element
+	   * @param {object} properties - CSS properties that will be added/removed from specified element
+	   */
+	
+	
+	  Sticky.prototype.css = function css(element, properties) {
+	    for (var property in properties) {
+	      if (properties.hasOwnProperty(property)) {
+	        element.style[property] = properties[property];
+	      }
+	    }
+	  };
+	
+	  return Sticky;
+	}();
+	
+	/**
+	 * Export function that supports AMD, CommonJS and Plain Browser.
+	 */
+	
+	
+	(function (root, factory) {
+	  if (true) {
+	    module.exports = factory;
+	  } else if (typeof define === 'function' && define.amd) {
+	    define([], factory);
+	  } else {
+	    root.Sticky = factory;
+	  }
+	})(this, Sticky);
 
 /***/ }
 /******/ ])

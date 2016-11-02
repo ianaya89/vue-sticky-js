@@ -10496,7 +10496,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(4)
+	__webpack_require__(4)
+	__vue_script__ = __webpack_require__(8)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
@@ -10511,7 +10512,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-653fc481/App.vue"
+	  var id = "_v-0b47d495/App.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10523,70 +10524,20 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _HelloWorld = __webpack_require__(5);
-	
-	var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	  name: 'App',
-	  components: [_HelloWorld2.default]
-	};
-
-/***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(6)
-	__vue_script__ = __webpack_require__(10)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/HelloWorld.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(11)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-11f00942/HelloWorld.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(7);
+	var content = __webpack_require__(5);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
+	var update = __webpack_require__(7)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-11f00942&scoped=true!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./HelloWorld.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-11f00942&scoped=true!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./HelloWorld.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10596,21 +10547,21 @@
 	}
 
 /***/ },
-/* 7 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(8)();
+	exports = module.exports = __webpack_require__(6)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "h1[_v-11f00942] {\n  color: tomato; }\n", ""]);
+	exports.push([module.id, "body {\n  font-family: sans-serif; }\n\n.container {\n  height: 2000px; }\n\n.box {\n  padding: 10px;\n  box-sizing: border-box;\n  border: 2px solid #3d3d3d;\n  width: 100%;\n  text-align: center;\n  line-height: 75px;\n  font-size: 20px;\n  background: #f3f3f3;\n  margin-bottom: 10px; }\n\n.stuck {\n  background: tomato !important; }\n\n.stuck-2 {\n  background: steelblue !important; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 8 */
+/* 6 */
 /***/ function(module, exports) {
 
 	/*
@@ -10666,7 +10617,7 @@
 
 
 /***/ },
-/* 9 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10888,29 +10839,485 @@
 
 
 /***/ },
-/* 10 */
-/***/ function(module, exports) {
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _sticky = __webpack_require__(9);
+	
+	var _sticky2 = _interopRequireDefault(_sticky);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	exports.default = {
-	  name: 'HelloWorld'
+	  name: 'App',
+	
+	  directives: {
+	    s: _sticky2.default
+	  },
+	
+	  data: function data() {
+	    return {
+	      stickyOptions: {
+	        marginTop: 20,
+	        forName: 0,
+	        className: 'stuck'
+	      },
+	
+	      stickyOptions2: {
+	        marginTop: 20,
+	        forName: 0,
+	        className: 'stuck-2'
+	      }
+	    };
+	  }
 	};
 
 /***/ },
-/* 11 */
-/***/ function(module, exports) {
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<h1 _v-11f00942=\"\">Hello World</h1>";
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _stickyJs = __webpack_require__(10);
+	
+	var _stickyJs2 = _interopRequireDefault(_stickyJs);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  bind: function bind(val) {
+	    this.el.parentElement.setAttribute('data-sticky-container', '');
+	    this.el.className += ' sticky';
+	  },
+	  update: function update(val) {
+	    if (val) {
+	      if (val.marginTop) {
+	        this.el.setAttribute('data-margin-top', val.marginTop);
+	      }
+	      if (val.forName) {
+	        this.el.setAttribute('data-sticky-for', val.forName);
+	      }
+	      if (val.className) {
+	        this.el.setAttribute('data-sticky-class', val.className);
+	      }
+	    }
+	
+	    new _stickyJs2.default('.sticky');
+	  }
+	};
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	var Sticky = __webpack_require__(11);
+	
+	module.exports = Sticky;
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	/**
+	 * Sticky.js
+	 * Library for sticky elements written in vanilla javascript. With this library you can easily set sticky elements on your website. It's also responsive.
+	 *
+	 * @version 1.1.4
+	 * @author Rafal Galus <biuro@rafalgalus.pl>
+	 * @website https://rgalus.github.io/sticky-js/
+	 * @repo https://github.com/rgalus/sticky-js
+	 * @license https://github.com/rgalus/sticky-js/blob/master/LICENSE
+	 */
+	
+	var Sticky = function () {
+	  /**
+	   * Sticky instance constructor
+	   * @constructor
+	   * @param {string} selector - Selector which we can find elements
+	   * @param {string} options - Global options for sticky elements (could be overwritten by data-{option}="" attributes)
+	   */
+	  function Sticky() {
+	    var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	
+	    _classCallCheck(this, Sticky);
+	
+	    this.selector = selector;
+	    this.elements = [];
+	
+	    this.version = '1.1.4';
+	
+	    this.vp = this.getViewportSize();
+	    this.scrollTop = this.getScrollTopPosition();
+	
+	    this.options = {
+	      marginTop: options.marginTop || 0,
+	      stickyFor: options.stickFor || 0,
+	      stickyClass: options.stickyClass || null
+	    };
+	
+	    this.run();
+	  }
+	
+	  /**
+	   * Function that waits for page to be fully loaded and then renders & activates every sticky element found with specified selector
+	   * @function
+	   */
+	
+	
+	  Sticky.prototype.run = function run() {
+	    var _this = this;
+	
+	    // wait for page to be fully loaded
+	    var pageLoaded = setInterval(function () {
+	      if (document.readyState === 'complete') {
+	        clearInterval(pageLoaded);
+	
+	        var elements = document.querySelectorAll(_this.selector);
+	        _this.forEach(elements, function (element) {
+	          return _this.renderElement(element);
+	        });
+	      }
+	    }, 10);
+	  };
+	
+	  /**
+	   * Function that assign needed variables for sticky element, that are used in future for calculations and other
+	   * @function
+	   * @param {node} element - Element to be rendered
+	   */
+	
+	
+	  Sticky.prototype.renderElement = function renderElement(element) {
+	    var _this2 = this;
+	
+	    // create container for variables needed in future
+	    element.sticky = {};
+	
+	    // set default variables
+	    element.sticky.active = false;
+	
+	    element.sticky.marginTop = parseInt(element.getAttribute('data-margin-top')) || this.options.marginTop;
+	    element.sticky.stickyFor = parseInt(element.getAttribute('data-sticky-for')) || this.options.stickyFor;
+	    element.sticky.stickyClass = element.getAttribute('data-sticky-class') || this.options.stickyClass;
+	
+	    element.sticky.container = this.getStickyContainer(element);
+	    element.sticky.container.rect = this.getRectangle(element.sticky.container);
+	
+	    element.sticky.rect = this.getRectangle(element);
+	
+	    // fix when element is image that has not yet loaded and width, height = 0
+	    if (element.tagName.toLowerCase === 'img') {
+	      element.onload = function () {
+	        return element.sticky.rect = _this2.getRectangle(element);
+	      };
+	    }
+	
+	    // activate rendered element
+	    this.activate(element);
+	  };
+	
+	  /**
+	   * Function that activates element when specified conditions are met and then initalise events
+	   * @function
+	   * @param {node} element - Element to be activated
+	   */
+	
+	
+	  Sticky.prototype.activate = function activate(element) {
+	    var heightBefore = element.sticky.container.offsetHeight;
+	
+	    this.css(element, { position: 'fixed' });
+	
+	    var heightAfter = element.sticky.container.offsetHeight;
+	
+	    this.css(element, { position: '' });
+	
+	    if (heightAfter >= heightBefore && element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
+	      element.sticky.active = true;
+	    }
+	
+	    if (this.elements.indexOf(element) < 0) {
+	      this.elements.push(element);
+	    }
+	
+	    if (!element.sticky.resizeEvent) {
+	      this.initResizeEvents(element);
+	      element.sticky.resizeEvent = true;
+	    }
+	
+	    if (!element.sticky.scrollEvent) {
+	      this.initScrollEvents(element);
+	      element.sticky.scrollEvent = true;
+	    }
+	  };
+	
+	  /**
+	   * Function which is adding onResizeEvents to window listener and assigns function to element as resizeListener
+	   * @function
+	   * @param {node} element - Element for which resize events are initialised
+	   */
+	
+	
+	  Sticky.prototype.initResizeEvents = function initResizeEvents(element) {
+	    var _this3 = this;
+	
+	    element.sticky.resizeListener = function () {
+	      return _this3.onResizeEvents(element);
+	    };
+	    window.addEventListener('resize', element.sticky.resizeListener);
+	  };
+	
+	  /**
+	   * Function which is fired when user resize window. It checks if element should be activated or deactivated and then run setPosition function
+	   * @function
+	   * @param {node} element - Element for which event function is fired
+	   */
+	
+	
+	  Sticky.prototype.onResizeEvents = function onResizeEvents(element) {
+	    this.vp = this.getViewportSize();
+	
+	    element.sticky.rect = this.getRectangle(element);
+	    element.sticky.container.rect = this.getRectangle(element.sticky.container);
+	
+	    if (element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
+	      element.sticky.active = true;
+	    } else if (element.sticky.stickyFor >= this.vp.width && element.sticky.active) {
+	      element.sticky.active = false;
+	    }
+	
+	    this.setPosition(element);
+	  };
+	
+	  /**
+	   * Function which is adding onScrollEvents to window listener and assigns function to element as scrollListener
+	   * @function
+	   * @param {node} element - Element for which scroll events are initialised
+	   */
+	
+	
+	  Sticky.prototype.initScrollEvents = function initScrollEvents(element) {
+	    var _this4 = this;
+	
+	    element.sticky.scrollListener = function () {
+	      return _this4.onScrollEvents(element);
+	    };
+	    window.addEventListener('scroll', element.sticky.scrollListener);
+	  };
+	
+	  /**
+	   * Function which is fired when user scroll window. If element is active, function is invoking setPosition function
+	   * @function
+	   * @param {node} element - Element for which event function is fired
+	   */
+	
+	
+	  Sticky.prototype.onScrollEvents = function onScrollEvents(element) {
+	    this.scrollTop = this.getScrollTopPosition();
+	
+	    if (element.sticky.active) {
+	      this.setPosition(element);
+	    }
+	  };
+	
+	  /**
+	   * Main function for the library. Here are some condition calculations and css appending for sticky element when user scroll window
+	   * @function
+	   * @param {node} element - Element that will be positioned if it's active
+	   */
+	
+	
+	  Sticky.prototype.setPosition = function setPosition(element) {
+	    this.css(element, { position: '', width: '', top: '', left: '' });
+	
+	    if (this.vp.height < element.sticky.rect.height || !element.sticky.active) {
+	      return;
+	    }
+	
+	    if (!element.sticky.rect.width) {
+	      element.sticky.rect = this.getRectangle(element);
+	    }
+	
+	    if (this.scrollTop > element.sticky.rect.top - element.sticky.marginTop) {
+	      this.css(element, {
+	        position: 'fixed',
+	        width: element.sticky.rect.width + 'px',
+	        left: element.sticky.rect.left + 'px'
+	      });
+	
+	      if (this.scrollTop + element.sticky.rect.height + element.sticky.marginTop > element.sticky.container.rect.top + element.sticky.container.offsetHeight) {
+	
+	        if (element.sticky.stickyClass) element.classList.remove(element.sticky.stickyClass);
+	
+	        this.css(element, {
+	          top: element.sticky.container.rect.top + element.sticky.container.offsetHeight - (this.scrollTop + element.sticky.rect.height) + 'px' });
+	      } else {
+	        if (element.sticky.stickyClass) element.classList.add(element.sticky.stickyClass);
+	
+	        this.css(element, { top: element.sticky.marginTop + 'px' });
+	      }
+	    } else {
+	      if (element.sticky.stickyClass) element.classList.remove(element.sticky.stickyClass);
+	
+	      this.css(element, { position: '', width: '', top: '', left: '' });
+	    }
+	  };
+	
+	  /**
+	   * Function that updates element sticky rectangle (with sticky container), then activate or deactivate element, then update position if it's active
+	   * @function
+	   */
+	
+	
+	  Sticky.prototype.update = function update() {
+	    var _this5 = this;
+	
+	    this.forEach(this.elements, function (element) {
+	      element.sticky.rect = _this5.getRectangle(element);
+	      element.sticky.container.rect = _this5.getRectangle(element.sticky.container);
+	
+	      _this5.activate(element);
+	      _this5.setPosition(element);
+	    });
+	  };
+	
+	  /**
+	   * Function that returns container element in which sticky element is stuck (if is not specified, then it's stuck to body)
+	   * @function
+	   * @param {node} element - Element which sticky container are looked for
+	   * @return {node} element - Sticky container
+	   */
+	
+	
+	  Sticky.prototype.getStickyContainer = function getStickyContainer(element) {
+	    var container = element;
+	
+	    while (!container.hasAttribute('data-sticky-container') && container !== document.querySelector('body')) {
+	      container = container.parentNode;
+	    }
+	
+	    return container;
+	  };
+	
+	  /**
+	   * Function that returns element rectangle & position (width, height, top, left)
+	   * @function
+	   * @param {node} element - Element which position & rectangle are returned
+	   * @return {object}
+	   */
+	
+	
+	  Sticky.prototype.getRectangle = function getRectangle(element) {
+	    this.css(element, { position: '', width: '', top: '', left: '' });
+	
+	    var width = Math.max(element.offsetWidth, element.clientWidth, element.scrollWidth);
+	    var height = Math.max(element.offsetHeight, element.clientHeight, element.scrollHeight);
+	
+	    var top = 0;
+	    var left = 0;
+	
+	    do {
+	      top += element.offsetTop || 0;
+	      left += element.offsetLeft || 0;
+	      element = element.offsetParent;
+	    } while (element);
+	
+	    return { top: top, left: left, width: width, height: height };
+	  };
+	
+	  /**
+	   * Function that returns viewport dimensions
+	   * @function
+	   * @return {object}
+	   */
+	
+	
+	  Sticky.prototype.getViewportSize = function getViewportSize() {
+	    return {
+	      width: Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
+	      height: Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+	    };
+	  };
+	
+	  /**
+	   * Function that returns scroll position offset from top
+	   * @function
+	   * @return {number}
+	   */
+	
+	
+	  Sticky.prototype.getScrollTopPosition = function getScrollTopPosition() {
+	    return (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0;
+	  };
+	
+	  /**
+	   * Helper function for loops
+	   * @helper
+	   * @param {array}
+	   * @param {function} callback - Callback function (no need for explanation)
+	   */
+	
+	
+	  Sticky.prototype.forEach = function forEach(array, callback) {
+	    for (var i = 0, len = array.length; i < len; i++) {
+	      callback(array[i]);
+	    }
+	  };
+	
+	  /**
+	   * Helper function to add/remove css properties for specified element.
+	   * @helper
+	   * @param {node} element - DOM element
+	   * @param {object} properties - CSS properties that will be added/removed from specified element
+	   */
+	
+	
+	  Sticky.prototype.css = function css(element, properties) {
+	    for (var property in properties) {
+	      if (properties.hasOwnProperty(property)) {
+	        element.style[property] = properties[property];
+	      }
+	    }
+	  };
+	
+	  return Sticky;
+	}();
+	
+	/**
+	 * Export function that supports AMD, CommonJS and Plain Browser.
+	 */
+	
+	
+	(function (root, factory) {
+	  if (true) {
+	    module.exports = factory;
+	  } else if (typeof define === 'function' && define.amd) {
+	    define([], factory);
+	  } else {
+	    root.Sticky = factory;
+	  }
+	})(this, Sticky);
 
 /***/ },
 /* 12 */
 /***/ function(module, exports) {
 
-	module.exports = "<hello-world></hello-world>";
+	module.exports = "<div class=\"container\"><div class=\"box\" v-s=\"stickyOptions\"><p>Sticky Element</p></div><div class=\"box\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>";
 
 /***/ }
 /******/ ]);
