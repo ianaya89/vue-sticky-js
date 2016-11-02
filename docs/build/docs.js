@@ -10502,7 +10502,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] docs/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(12)
+	__vue_template__ = __webpack_require__(13)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10848,17 +10848,15 @@
 	  value: true
 	});
 	
-	var _sticky = __webpack_require__(9);
+	var _index = __webpack_require__(9);
 	
-	var _sticky2 = _interopRequireDefault(_sticky);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	console.log(_index.stickyDirective);
 	
 	exports.default = {
 	  name: 'App',
 	
 	  directives: {
-	    s: _sticky2.default
+	    s: _index.stickyDirective
 	  },
 	
 	  data: function data() {
@@ -10867,12 +10865,6 @@
 	        marginTop: 20,
 	        forName: 0,
 	        className: 'stuck'
-	      },
-	
-	      stickyOptions2: {
-	        marginTop: 20,
-	        forName: 0,
-	        className: 'stuck-2'
 	      }
 	    };
 	  }
@@ -10884,11 +10876,32 @@
 
 	'use strict';
 	
+	var _sticky = __webpack_require__(10);
+	
+	var _sticky2 = _interopRequireDefault(_sticky);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	module.exports = {
+	  install: function install(Vue) {
+	    Vue.directive('sticky', _sticky2.default);
+	  },
+	
+	
+	  stickyDirective: _sticky2.default
+	};
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	
-	var _stickyJs = __webpack_require__(10);
+	var _stickyJs = __webpack_require__(11);
 	
 	var _stickyJs2 = _interopRequireDefault(_stickyJs);
 	
@@ -10917,17 +10930,17 @@
 	};
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	var Sticky = __webpack_require__(11);
+	var Sticky = __webpack_require__(12);
 	
 	module.exports = Sticky;
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11314,7 +11327,7 @@
 	})(this, Sticky);
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\"><div class=\"box\" v-s=\"stickyOptions\"><p>Sticky Element</p></div><div class=\"box\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>";

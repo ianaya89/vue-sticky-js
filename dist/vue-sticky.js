@@ -56,18 +56,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
 	var _sticky = __webpack_require__(1);
 	
 	var _sticky2 = _interopRequireDefault(_sticky);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (Vue) {
-	  Vue.directive('sticky', _sticky2.default);
+	module.exports = {
+	  install: function install(Vue) {
+	    Vue.directive('sticky', _sticky2.default);
+	  },
+	
+	
+	  stickyDirective: _sticky2.default
 	};
 
 /***/ },
