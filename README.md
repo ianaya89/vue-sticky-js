@@ -1,6 +1,6 @@
 # vue-sticky
 
-> Vue.js directive to make sticky elements
+> Vue.js directive to make sticky elements built on [sticky-js](https://github.com/rgalus/sticky-js)
 
 :warning: [UNDER DEVELOPMENT]
 
