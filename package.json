@@ -1,0 +1,57 @@
+{
+  "name": "vue-sticky",
+  "version": "0.0.1",
+  "description": "Vue.js directive to make sticky elements",
+  "main": "dist/vue-sticky.min.js",
+  "author": {
+    "name": "Ignacio Anaya",
+    "email": "ignacio.anaya89@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --quiet --port 8080 --open --config build/webpack.config.js",
+    "build-all": "npm run build && npm run build-docs",
+    "build-docs": "webpack --progress --hide-modules --config build/webpack.config.js && set NODE_ENV=production webpack --progress --hide-modules",
+    "build": "webpack --progress --hide-modules --config build/webpack.build.min.js && webpack --progress --hide-modules --config build/webpack.build.js",
+    "prepublish": "npm run build-all",
+    "preinstall": "npm run build-all",
+    "eslint": "eslint --ext .js,.vue src"
+  },
+  "devDependencies": {
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-runtime": "^6.3.19",
+    "css-loader": "^0.21.0",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-html": "^1.5.2",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.2.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "node-sass": "^3.4.1",
+    "prismjs": "^1.5.1",
+    "pug": "^2.0.0-beta6",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "vue": "^1.0.26",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "8.5.3",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  },
+  "pre-commit": [
+    "eslint"
+  ],
+  "dependencies": {
+    "sticky-js": "^1.1.4"
+  }
+}

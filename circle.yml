@@ -1,0 +1,19 @@
+machine:
+  timezone:
+    America/Vancouver
+  node:
+    version: 6
+
+dependencies:
+  override:
+    - npm install
+    - npm install coveralls
+    - npm install bithound
+
+test:
+  override:
+    - npm test
+    - COVERALLS_SERVICE_NAME="circleci" COVERALLS_SERVICE_JOB_ID="$CIRCLE_BUILD_NUM" ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info
+    - ./node_modules/.bin/bithound check BITHOUND_TOKEN
+  post:
+    - cp -R ./test/unit/coverage/* $CIRCLE_ARTIFACTS/
