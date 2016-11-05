@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["vue-sticky"] = factory();
+		exports["vue-sticky-js"] = factory();
 	else
-		root["vue-sticky"] = factory();
+		root["vue-sticky-js"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -510,4 +510,4 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=vue-sticky.js.map
+//# sourceMappingURL=vue-sticky-js.js.map
