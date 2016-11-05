@@ -1,13 +1,17 @@
 {
   "name": "vue-sticky-js",
   "version": "0.0.1",
-  "description": "Vue.js directive to make sticky elements using sticky-js",
+  "description": "Vue.js directive to make sticky elements built on sticky-js",
   "main": "dist/vue-sticky-js.min.js",
   "author": {
     "name": "Ignacio Anaya",
     "email": "ignacio.anaya89@gmail.com"
   },
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/npm/npm.git"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --quiet --port 8080 --open --config build/webpack.config.js",
     "build-all": "npm run build && npm run build-docs",
