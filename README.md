@@ -9,13 +9,13 @@
 </p>
 
 ### Prerequisites
-1. [vue](https://github.com/vuejs/vue)
+[Vue.js](https://github.com/vuejs/vue)
 
 ### Installation
 `$ npm i -S vue-sticky`
 
 ### Directive
-1. `v-sticky` => Define a new sticky element.
+`v-sticky` => Define a new sticky element.
 
 ### Global Implementation
 `main.js`
