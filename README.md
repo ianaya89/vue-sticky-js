@@ -2,8 +2,6 @@
 
 > Vue.js directive to make sticky elements built on [sticky-js](https://github.com/rgalus/sticky-js)
 
-:warning: [UNDER DEVELOPMENT]
-
 <p style="text-align: center">
   <img src="img/vue.png" alt="vue" title="vue"/>
 </p>
