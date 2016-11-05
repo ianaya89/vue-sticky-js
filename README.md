@@ -17,7 +17,7 @@
 
 ## Implementation
 
-  ### Global
+### Global
   `main.js`
   ```javascript
   import Vue     from 'vue';
@@ -55,7 +55,7 @@
 
   ```
 
-  ### Component
+### Component
 
   `Component.vue`
   ```html
