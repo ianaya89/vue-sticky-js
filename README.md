@@ -1,4 +1,4 @@
-# vue-sticky
+# vue-sticky-js
 
 > Vue.js directive to make sticky elements built on [sticky-js](https://github.com/rgalus/sticky-js)
 
@@ -12,7 +12,7 @@
 [Vue.js](https://github.com/vuejs/vue)
 
 ### Installation
-`$ npm i -S vue-sticky`
+`$ npm i -S vue-sticky-js`
 
 ### Directive
 `v-sticky` => Define a new sticky element.
@@ -21,7 +21,7 @@
 `main.js`
 ```javascript
 import Vue     from 'vue';
-import VueSticky from 'vue-sticky';
+import VueSticky from 'vue-sticky-js';
 
 Vue.use(VueSticky.install);
 
@@ -60,7 +60,7 @@ Vue.use(VueSticky.install);
 `Component.vue`
 ```html
 <script>
-  import { stickyDirective } from 'vue-sticky';
+  import { stickyDirective } from 'vue-sticky-js';
 
   export default {
     name: 'Component',

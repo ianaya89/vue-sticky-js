@@ -1,8 +1,8 @@
 {
-  "name": "vue-sticky",
+  "name": "vue-sticky-js",
   "version": "0.0.1",
-  "description": "Vue.js directive to make sticky elements",
-  "main": "dist/vue-sticky.min.js",
+  "description": "Vue.js directive to make sticky elements using sticky-js",
+  "main": "dist/vue-sticky-js.min.js",
   "author": {
     "name": "Ignacio Anaya",
     "email": "ignacio.anaya89@gmail.com"
