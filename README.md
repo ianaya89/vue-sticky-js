@@ -6,80 +6,80 @@
   <img src="img/vue.png" alt="vue" title="vue"/>
 </p>
 
-### Prerequisites
+## Prerequisites
 [Vue.js](https://github.com/vuejs/vue)
 
-### Installation
+## Installation
 `$ npm i -S vue-sticky-js`
 
-### Directive
+## Directive
 `v-sticky` => Define a new sticky element.
 
-### Global Implementation
-`main.js`
-```javascript
-import Vue     from 'vue';
-import VueSticky from 'vue-sticky-js';
+## Implementation
 
-Vue.use(VueSticky.install);
+  ### Global
+  `main.js`
+  ```javascript
+  import Vue     from 'vue';
+  import VueSticky from 'vue-sticky-js';
 
-// ...
-```
+  Vue.use(VueSticky.install);
 
-`Component.vue`
-```html
-<script>
-  export default {
-    name: 'Component',
+  // ...
+  ```
 
-    data() {
-      return {
-        stickyOptions: {
-          marginTop: 20,
-          forName: 0,
-          className: 'stuck'
-        }
-      };
-    }
+  `Component.vue`
+  ```html
+  <script>
+    export default {
+      name: 'Component',
 
-  };
-</script>
+      data() {
+        return {
+          stickyOptions: {
+            marginTop: 20,
+            forName: 0,
+            className: 'stuck'
+          }
+        };
+      }
 
-<template lang='pug'>
-  .container
-    .box(v-sticky='stickyOptions') //- stickyOptions are not mandatory
-      p Sticky Element
-</template>
+    };
+  </script>
 
-```
+  <template lang='pug'>
+    .container
+      .box(v-sticky='stickyOptions') //- stickyOptions are not mandatory
+        p Sticky Element
+  </template>
 
-### Component Implementation
+  ```
 
-`Component.vue`
-```html
-<script>
-  import { stickyDirective } from 'vue-sticky-js';
+  ### Component
 
-  export default {
-    name: 'Component',
+  `Component.vue`
+  ```html
+  <script>
+    import { stickyDirective } from 'vue-sticky-js';
 
-    directives: {
-      s: stickyDirective // You can name it as you want.
-    }
+    export default {
+      name: 'Component',
 
-  };
-</script>
+      directives: {
+        s: stickyDirective // You can name it as you want.
+      }
 
-<template lang='pug'>
-  .container
-    .box(v-s) //- stickyOptions are not mandatory
-      p Sticky Element
-</template>
+    };
+  </script>
 
-```
+  <template lang='pug'>
+    .container
+      .box(v-s) //- stickyOptions are not mandatory
+        p Sticky Element
+  </template>
+  ```
 
-### Development Setup
-
+## Development Setup
 ```bash
 # install dependencies
 $ npm install
@@ -94,4 +94,4 @@ $ npm run test
 $ npm run build
 ```
 
-**This project was built with [yeoman](http://yeoman.io/) and [generator-vue-component](https://github.com/ianaya89/generator-vue-component) ❤️**
+**This project was built with [yeoman](http://yeoman.io/) and [generator-vue-component](https://github.com/ianaya89/generator-vue-component)**
