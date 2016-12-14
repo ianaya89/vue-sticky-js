@@ -18,7 +18,6 @@
     "build-docs": "webpack --progress --hide-modules --config build/webpack.config.js && set NODE_ENV=production webpack --progress --hide-modules",
     "build": "webpack --progress --hide-modules --config build/webpack.build.min.js && webpack --progress --hide-modules --config build/webpack.build.js",
     "prepublish": "npm run build-all",
-    "preinstall": "npm run build-all",
     "eslint": "eslint --ext .js,.vue src"
   },
   "devDependencies": {
