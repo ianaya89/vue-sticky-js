@@ -1,6 +1,6 @@
 {
   "name": "vue-sticky-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue.js directive to make sticky elements built on sticky-js",
   "main": "dist/vue-sticky-js.min.js",
   "author": {
