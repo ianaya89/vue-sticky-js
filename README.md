@@ -1,10 +1,7 @@
 # vue-sticky-js
 
-> Vue.js directive to make sticky elements built on [sticky-js](https://github.com/rgalus/sticky-js)
+>🏏 Vue.js directive to make sticky elements built with [sticky-js](https://github.com/rgalus/sticky-js)
 
-<p align="center">
-  <img src="img/vue.png" alt="vue" title="vue"/>
-</p>
 
 ## Prerequisites
 [Vue.js](https://github.com/vuejs/vue)

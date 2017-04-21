@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -61,9 +61,9 @@
 	  components: { App: _App2.default }
 	});
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*!
 	 * Vue.js v1.0.28
@@ -10305,9 +10305,9 @@
 	module.exports = Vue;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	// shim for using process in browser
 	var process = module.exports = {};
@@ -10491,9 +10491,9 @@
 	process.umask = function() { return 0; };
 
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	__webpack_require__(4)
@@ -10512,7 +10512,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-c110dd86/App.vue"
+	  var id = "_v-48f592fa/App.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10520,9 +10520,9 @@
 	  }
 	})()}
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
@@ -10536,8 +10536,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js!../node_modules/sass-loader/index.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js!../node_modules/sass-loader/index.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10546,9 +10546,9 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
 	// imports
@@ -10560,9 +10560,9 @@
 	// exports
 
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -10616,9 +10616,9 @@
 	};
 
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -10838,9 +10838,9 @@
 	}
 
 
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -10870,9 +10870,9 @@
 	  }
 	};
 
-/***/ },
+/***/ }),
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -10891,9 +10891,9 @@
 	  stickyDirective: _sticky2.default
 	};
 
-/***/ },
+/***/ }),
 /* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -10929,9 +10929,9 @@
 	  }
 	};
 
-/***/ },
+/***/ }),
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	
 	var Sticky = __webpack_require__(12);
@@ -10939,9 +10939,9 @@
 	module.exports = Sticky;
 
 
-/***/ },
+/***/ }),
 /* 12 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
@@ -10949,7 +10949,7 @@
 	 * Sticky.js
 	 * Library for sticky elements written in vanilla javascript. With this library you can easily set sticky elements on your website. It's also responsive.
 	 *
-	 * @version 1.1.4
+	 * @version 1.2.0
 	 * @author Rafal Galus <biuro@rafalgalus.pl>
 	 * @website https://rgalus.github.io/sticky-js/
 	 * @repo https://github.com/rgalus/sticky-js
@@ -10972,16 +10972,24 @@
 	    this.selector = selector;
 	    this.elements = [];
 	
-	    this.version = '1.1.4';
+	    this.version = '1.2.0';
 	
 	    this.vp = this.getViewportSize();
-	    this.scrollTop = this.getScrollTopPosition();
+	    this.body = document.querySelector('body');
 	
 	    this.options = {
+	      wrap: options.wrap || false,
 	      marginTop: options.marginTop || 0,
-	      stickyFor: options.stickFor || 0,
-	      stickyClass: options.stickyClass || null
+	      stickyFor: options.stickyFor || 0,
+	      stickyClass: options.stickyClass || null,
+	      stickyContainer: options.stickyContainer || 'body'
 	    };
+	
+	    this.updateScrollTopPosition = this.updateScrollTopPosition.bind(this);
+	
+	    this.updateScrollTopPosition();
+	    window.addEventListener('load', this.updateScrollTopPosition);
+	    window.addEventListener('scroll', this.updateScrollTopPosition);
 	
 	    this.run();
 	  }
@@ -11027,6 +11035,10 @@
 	    element.sticky.marginTop = parseInt(element.getAttribute('data-margin-top')) || this.options.marginTop;
 	    element.sticky.stickyFor = parseInt(element.getAttribute('data-sticky-for')) || this.options.stickyFor;
 	    element.sticky.stickyClass = element.getAttribute('data-sticky-class') || this.options.stickyClass;
+	    element.sticky.wrap = element.hasAttribute('data-sticky-wrap') ? true : this.options.wrap;
+	    // @todo attribute for stickyContainer
+	    // element.sticky.stickyContainer = element.getAttribute('data-sticky-container') || this.options.stickyContainer;
+	    element.sticky.stickyContainer = this.options.stickyContainer;
 	
 	    element.sticky.container = this.getStickyContainer(element);
 	    element.sticky.container.rect = this.getRectangle(element.sticky.container);
@@ -11034,14 +11046,30 @@
 	    element.sticky.rect = this.getRectangle(element);
 	
 	    // fix when element is image that has not yet loaded and width, height = 0
-	    if (element.tagName.toLowerCase === 'img') {
+	    if (element.tagName.toLowerCase() === 'img') {
 	      element.onload = function () {
 	        return element.sticky.rect = _this2.getRectangle(element);
 	      };
 	    }
 	
+	    if (element.sticky.wrap) {
+	      this.wrapElement(element);
+	    }
+	
 	    // activate rendered element
 	    this.activate(element);
+	  };
+	
+	  /**
+	   * Wraps element into placeholder element
+	   * @function
+	   * @param {node} element - Element to be wrapped
+	   */
+	
+	
+	  Sticky.prototype.wrapElement = function wrapElement(element) {
+	    element.insertAdjacentHTML('beforebegin', '<span></span>');
+	    element.previousSibling.appendChild(element);
 	  };
 	
 	  /**
@@ -11052,15 +11080,7 @@
 	
 	
 	  Sticky.prototype.activate = function activate(element) {
-	    var heightBefore = element.sticky.container.offsetHeight;
-	
-	    this.css(element, { position: 'fixed' });
-	
-	    var heightAfter = element.sticky.container.offsetHeight;
-	
-	    this.css(element, { position: '' });
-	
-	    if (heightAfter >= heightBefore && element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
+	    if (element.sticky.rect.top + element.sticky.rect.height < element.sticky.container.rect.top + element.sticky.container.rect.height && element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
 	      element.sticky.active = true;
 	    }
 	
@@ -11077,6 +11097,8 @@
 	      this.initScrollEvents(element);
 	      element.sticky.scrollEvent = true;
 	    }
+	
+	    this.setPosition(element);
 	  };
 	
 	  /**
@@ -11096,6 +11118,17 @@
 	  };
 	
 	  /**
+	   * Removes element listener from resize event
+	   * @function
+	   * @param {node} element - Element from which listener is deleted
+	   */
+	
+	
+	  Sticky.prototype.destroyResizeEvents = function destroyResizeEvents(element) {
+	    window.removeEventListener('resize', element.sticky.resizeListener);
+	  };
+	
+	  /**
 	   * Function which is fired when user resize window. It checks if element should be activated or deactivated and then run setPosition function
 	   * @function
 	   * @param {node} element - Element for which event function is fired
@@ -11108,9 +11141,9 @@
 	    element.sticky.rect = this.getRectangle(element);
 	    element.sticky.container.rect = this.getRectangle(element.sticky.container);
 	
-	    if (element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
+	    if (element.sticky.rect.top + element.sticky.rect.height < element.sticky.container.rect.top + element.sticky.container.rect.height && element.sticky.stickyFor < this.vp.width && !element.sticky.active) {
 	      element.sticky.active = true;
-	    } else if (element.sticky.stickyFor >= this.vp.width && element.sticky.active) {
+	    } else if (element.sticky.rect.top + element.sticky.rect.height >= element.sticky.container.rect.top + element.sticky.container.rect.height || element.sticky.stickyFor >= this.vp.width && element.sticky.active) {
 	      element.sticky.active = false;
 	    }
 	
@@ -11134,6 +11167,17 @@
 	  };
 	
 	  /**
+	   * Removes element listener from scroll event
+	   * @function
+	   * @param {node} element - Element from which listener is deleted
+	   */
+	
+	
+	  Sticky.prototype.destroyScrollEvents = function destroyScrollEvents(element) {
+	    window.removeEventListener('scroll', element.sticky.scrollListener);
+	  };
+	
+	  /**
 	   * Function which is fired when user scroll window. If element is active, function is invoking setPosition function
 	   * @function
 	   * @param {node} element - Element for which event function is fired
@@ -11141,8 +11185,6 @@
 	
 	
 	  Sticky.prototype.onScrollEvents = function onScrollEvents(element) {
-	    this.scrollTop = this.getScrollTopPosition();
-	
 	    if (element.sticky.active) {
 	      this.setPosition(element);
 	    }
@@ -11166,7 +11208,22 @@
 	      element.sticky.rect = this.getRectangle(element);
 	    }
 	
-	    if (this.scrollTop > element.sticky.rect.top - element.sticky.marginTop) {
+	    if (element.sticky.wrap) {
+	      this.css(element.parentNode, {
+	        display: 'block',
+	        width: element.sticky.rect.width + 'px',
+	        height: element.sticky.rect.height + 'px'
+	      });
+	    }
+	
+	    if (element.sticky.rect.top === 0 && element.sticky.container === this.body) {
+	      this.css(element, {
+	        position: 'fixed',
+	        top: element.sticky.rect.top + 'px',
+	        left: element.sticky.rect.left + 'px',
+	        width: element.sticky.rect.width + 'px'
+	      });
+	    } else if (this.scrollTop > element.sticky.rect.top - element.sticky.marginTop) {
 	      this.css(element, {
 	        position: 'fixed',
 	        width: element.sticky.rect.width + 'px',
@@ -11175,19 +11232,29 @@
 	
 	      if (this.scrollTop + element.sticky.rect.height + element.sticky.marginTop > element.sticky.container.rect.top + element.sticky.container.offsetHeight) {
 	
-	        if (element.sticky.stickyClass) element.classList.remove(element.sticky.stickyClass);
+	        if (element.sticky.stickyClass) {
+	          element.classList.remove(element.sticky.stickyClass);
+	        }
 	
 	        this.css(element, {
 	          top: element.sticky.container.rect.top + element.sticky.container.offsetHeight - (this.scrollTop + element.sticky.rect.height) + 'px' });
 	      } else {
-	        if (element.sticky.stickyClass) element.classList.add(element.sticky.stickyClass);
+	        if (element.sticky.stickyClass) {
+	          element.classList.add(element.sticky.stickyClass);
+	        }
 	
 	        this.css(element, { top: element.sticky.marginTop + 'px' });
 	      }
 	    } else {
-	      if (element.sticky.stickyClass) element.classList.remove(element.sticky.stickyClass);
+	      if (element.sticky.stickyClass) {
+	        element.classList.remove(element.sticky.stickyClass);
+	      }
 	
 	      this.css(element, { position: '', width: '', top: '', left: '' });
+	
+	      if (element.sticky.wrap) {
+	        this.css(element.parentNode, { display: '', width: '', height: '' });
+	      }
 	    }
 	  };
 	
@@ -11210,6 +11277,22 @@
 	  };
 	
 	  /**
+	   * Destroys sticky element, remove listeners
+	   * @function
+	   */
+	
+	
+	  Sticky.prototype.destroy = function destroy() {
+	    var _this6 = this;
+	
+	    this.forEach(this.elements, function (element) {
+	      _this6.destroyResizeEvents(element);
+	      _this6.destroyScrollEvents(element);
+	      delete element.sticky;
+	    });
+	  };
+	
+	  /**
 	   * Function that returns container element in which sticky element is stuck (if is not specified, then it's stuck to body)
 	   * @function
 	   * @param {node} element - Element which sticky container are looked for
@@ -11218,9 +11301,9 @@
 	
 	
 	  Sticky.prototype.getStickyContainer = function getStickyContainer(element) {
-	    var container = element;
+	    var container = element.parentNode;
 	
-	    while (!container.hasAttribute('data-sticky-container') && container !== document.querySelector('body')) {
+	    while (!container.hasAttribute('data-sticky-container') && !container.parentNode.querySelector(element.sticky.stickyContainer) && container !== this.body) {
 	      container = container.parentNode;
 	    }
 	
@@ -11268,14 +11351,14 @@
 	  };
 	
 	  /**
-	   * Function that returns scroll position offset from top
+	   * Function that updates window scroll position
 	   * @function
 	   * @return {number}
 	   */
 	
 	
-	  Sticky.prototype.getScrollTopPosition = function getScrollTopPosition() {
-	    return (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0;
+	  Sticky.prototype.updateScrollTopPosition = function updateScrollTopPosition() {
+	    this.scrollTop = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0) || 0;
 	  };
 	
 	  /**
@@ -11326,12 +11409,12 @@
 	  }
 	})(this, Sticky);
 
-/***/ },
+/***/ }),
 /* 13 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = "<div class=\"container\"><div class=\"box\" v-s=\"stickyOptions\"><p>Sticky Element</p></div><div class=\"box\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>";
 
-/***/ }
+/***/ })
 /******/ ]);
 //# sourceMappingURL=docs.js.map
