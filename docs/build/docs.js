@@ -8231,6 +8231,9 @@
 	      if (binding.value.className) {
 	        el.firstChild.setAttribute('data-sticky-class', binding.value.className);
 	      }
+	      if (binding.value.wrap) {
+	        el.firstChild.setAttribute('data-sticky-wrap', binding.value.wrap);
+	      }
 	    }
 	
 	    new _stickyJs2.default('.sticky');
