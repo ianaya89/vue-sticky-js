@@ -2,6 +2,8 @@
 
 >🏏 Vue.js directive to make sticky elements built with [sticky-js](https://github.com/rgalus/sticky-js)
 
+**⚠️ Vue.js 2 is not supported yet. [WIP]**
+
 
 ## Prerequisites
 [Vue.js](https://github.com/vuejs/vue)
